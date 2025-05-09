@@ -30,13 +30,10 @@ def check_lists(lst1, lst2):
 
 
 def list_of_lists(lst_of_lsts):
-    # Aplica recortes específicos a las 3 listas internas
-    modified = []
-    if len(lst_of_lsts) >= 1:
-        modified.append(lst_of_lsts[0][:2])  # Primeros 2 elementos
-    if len(lst_of_lsts) >= 2:
-        modified.append(lst_of_lsts[1][1:4])  # Elementos del índice 1 al 3
-    if len(lst_of_lsts) >= 3:
-        modified.append(lst_of_lsts[2][-2:])  # Últimos 2 elementos
-    return modified
+    return [
+        lst_of_lsts[0][:2],     # first 2 elements of the first list
+        lst_of_lsts[1][1:4],    # Elements from index 1 to 3 (4 is not included)
+        lst_of_lsts[2][-2:]     # Last 2 elements of the third list
+    ]
+
 
